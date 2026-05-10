@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NuMind MAPS · Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div id="app">
+
+    <!-- ── LOGIN ────────────────────────────────────────────── -->
+    <div id="loginView" class="login-wrap">
+      <div class="login-card">
+        <div class="brand">
+          <div class="brand-dot"><span>NM</span></div>
+          <div>
+            <div class="brand-name">NuMind MAPS</div>
+            <div class="brand-sub">Assessment Platform</div>
+          </div>
+        </div>
+        <h1 class="login-title">Admin portal</h1>
+        <p class="login-sub">Sign in to view student reports</p>
+        <div class="field">
+          <label for="uname">Username</label>
+          <input id="uname" type="text" placeholder="admin" autocomplete="username" />
+        </div>
+        <div class="field">
+          <label for="pwd">Password</label>
+          <input id="pwd" type="password" placeholder="••••••••" autocomplete="current-password" />
+        </div>
+        <p class="err" id="loginErr"></p>
+        <button class="login-btn" id="loginBtn">Sign in</button>
+      </div>
+    </div>
+
+    <!-- ── DASHBOARD ─────────────────────────────────────────── -->
+    <div id="dashView" class="dash hidden">
+
+      <!-- Top bar -->
+      <div class="topbar">
+        <div class="topbar-left">
+          <div class="brand-dot sm"><span>NM</span></div>
+          <span class="topbar-brand">NuMind MAPS</span>
+          <span class="topbar-tag">Admin</span>
+        </div>
+        <div class="topbar-right">
+          <div class="stats-pills" id="statsPills"></div>
+          <span class="admin-pill" id="adminName"></span>
+          <button class="logout-btn" id="logoutBtn">Sign out</button>
+        </div>
+      </div>
+
+      <div class="dash-body">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <div class="sidebar-header">
+            <div class="sidebar-title">Students</div>
+            <div class="search-box">
+              <span class="search-icon">⌕</span>
+              <input id="searchInput" type="text" placeholder="Search name, school…" />
+            </div>
+          </div>
+
+          <!-- Filters -->
+          <div class="filter-row">
+            <select id="filterSchool" class="filter-select"><option value="">All schools</option></select>
+            <select id="filterClass"  class="filter-select"><option value="">All classes</option></select>
+          </div>
+          <div class="filters">
+            <span class="filter-chip active" data-tier="all">All</span>
+            <span class="filter-chip" data-tier="Strong Fit">Strong</span>
+            <span class="filter-chip" data-tier="Emerging Fit">Emerging</span>
+            <span class="filter-chip" data-tier="Exploratory Fit">Exploratory</span>
+          </div>
+
+          <div class="student-count" id="studentCount"></div>
+          <div class="student-list" id="studentList">
+            <div class="list-loading">Loading students…</div>
+          </div>
+        </div>
+
+        <!-- Main panel -->
+        <div class="main" id="mainPanel">
+          <div class="placeholder">
+            <div class="placeholder-icon">⊞</div>
+            <div class="ph-title">Select a student</div>
+            <p>Click any student on the left to view their full assessment report</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /#app -->
+
+  <script src="/app.js"></script>
+</body>
+</html>

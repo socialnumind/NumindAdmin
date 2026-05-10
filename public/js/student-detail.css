@@ -1,0 +1,112 @@
+/* student-detail.css
+   Styles for the student detail panel rendered by student-detail.js
+   Works alongside your existing dashboard styles — all classes are
+   prefixed with `sd-` to avoid conflicts.
+*/
+
+/* ── Layout ────────────────────────────────────────────────────── */
+.sd-section         { margin: 1.25rem 0; }
+.sd-section-title   { font-size: .85rem; font-weight: 700; color: #5B2D8E;
+                      text-transform: uppercase; letter-spacing: .04em;
+                      margin: 0 0 .6rem; border-bottom: 2px solid #EDE9FE; padding-bottom: .3rem; }
+
+/* ── Warning banner (is_fallback) ─────────────────────────────── */
+.sd-banner          { padding: .65rem 1rem; border-radius: 6px; font-size: .8rem; margin-bottom: 1rem; }
+.sd-banner--warn    { background: #FFF9C4; border: 1px solid #F5A623; color: #92400E; }
+
+/* ── Header ────────────────────────────────────────────────────── */
+.sd-header          { padding-bottom: .75rem; border-bottom: 1px solid #E5E7EB; }
+.sd-name            { font-size: 1.15rem; font-weight: 700; color: #1F2937; margin: 0 0 .2rem; }
+.sd-meta            { font-size: .78rem; color: #6B7280; margin: 0 0 .75rem; }
+.sd-score-row       { display: flex; flex-wrap: wrap; gap: .5rem; }
+
+/* ── Badges ────────────────────────────────────────────────────── */
+.sd-badge           { display: flex; flex-direction: column; align-items: center;
+                      padding: .35rem .65rem; border-radius: 8px; min-width: 68px; }
+.sd-badge-label     { font-size: .6rem; text-transform: uppercase; letter-spacing: .04em; opacity: .75; }
+.sd-badge-value     { font-size: .8rem; font-weight: 700; }
+.sd-badge--purple   { background: #F5F3FF; color: #5B2D8E; }
+.sd-badge--teal     { background: #E0F7FA; color: #0077A8; }
+.sd-badge--green    { background: #F0FDF4; color: #166534; }
+.sd-badge--amber    { background: #FFFBEB; color: #92400E; }
+.sd-badge--red      { background: #FEF2F2; color: #991B1B; }
+.sd-badge--gray     { background: #F3F4F6; color: #374151; }
+
+/* ── Pathway boxes ─────────────────────────────────────────────── */
+.sd-pathway-row     { display: flex; gap: .75rem; flex-wrap: wrap; }
+.sd-pathway-box     { flex: 1 1 140px; padding: .75rem 1rem; border-radius: 8px;
+                      display: flex; flex-direction: column; gap: .3rem; }
+.sd-pathway-label   { font-size: .65rem; text-transform: uppercase; letter-spacing: .05em; font-weight: 700; opacity: .75; }
+.sd-pathway-value   { font-size: .85rem; font-weight: 700; }
+.sd-pathway-box--purple     { background: #F5F3FF; color: #5B2D8E; border: 1px solid #C4B5FD; }
+.sd-pathway-box--teal       { background: #E0F7FA; color: #0077A8; border: 1px solid #80DEEA; }
+.sd-pathway-box--gray       { background: #F3F4F6; color: #374151; border: 1px solid #D1D5DB; }
+
+/* ── Personality trait cards ───────────────────────────────────── */
+.sd-trait-row       { display: flex; gap: .75rem; flex-wrap: wrap; }
+.sd-trait-card      { flex: 1 1 120px; display: flex; flex-direction: column; gap: .2rem;
+                      padding: .65rem .9rem; border-radius: 8px; background: #F3F4F6;
+                      border: 1px solid #E5E7EB; }
+.sd-trait-rank      { font-size: 1rem; font-weight: 800; color: #5B2D8E; line-height: 1; }
+.sd-trait-name      { font-size: .8rem; font-weight: 600; color: #1F2937; }
+.sd-trait-score     { font-size: .7rem; color: #6B7280; }
+
+/* ── Aptitude tags ─────────────────────────────────────────────── */
+.sd-tag-group       { margin-bottom: .75rem; }
+.sd-tag-group-title { font-size: .75rem; font-weight: 700; color: #374151; margin: 0 0 .35rem; }
+.sd-tags            { display: flex; flex-wrap: wrap; gap: .4rem; }
+.sd-tag             { padding: .25rem .65rem; border-radius: 999px; font-size: .72rem; font-weight: 600; }
+.sd-tag--strong     { background: #F5F3FF; color: #5B2D8E; border: 1px solid #C4B5FD; }
+.sd-tag--emerging   { background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; }
+
+/* ── Interest cards ────────────────────────────────────────────── */
+.sd-interest-row    { display: flex; gap: .75rem; flex-wrap: wrap; }
+.sd-interest-card   { flex: 1 1 130px; display: flex; flex-direction: column; gap: .2rem;
+                      padding: .65rem .9rem; border-radius: 8px;
+                      background: #FAFAFA; border: 1px solid #E5E7EB; }
+.sd-interest-rank   { font-size: 1rem; font-weight: 800; color: #00B8D9; line-height: 1; }
+.sd-interest-label  { font-size: .8rem; font-weight: 600; color: #1F2937; }
+.sd-interest-score  { font-size: .7rem; color: #6B7280; }
+
+/* ── Internal motivators ───────────────────────────────────────── */
+.sd-prose           { font-size: .82rem; color: #374151; line-height: 1.65;
+                      background: #FAFAFA; border-left: 3px solid #5B2D8E;
+                      padding: .75rem 1rem; border-radius: 0 6px 6px 0; margin: 0; }
+
+/* ── Career matrix ─────────────────────────────────────────────── */
+.sd-career-table    { width: 100%; border-collapse: collapse; font-size: .78rem; }
+.sd-career-table th { background: #5B2D8E; color: #fff; text-align: left;
+                      padding: .45rem .6rem; font-size: .72rem; }
+.sd-career-table td { padding: .4rem .6rem; border-bottom: 1px solid #F3F4F6; vertical-align: top; }
+.sd-career-cluster-row td   { background: #F5F3FF; color: #5B2D8E; font-weight: 700;
+                               font-size: .72rem; text-transform: uppercase; letter-spacing: .04em;
+                               padding: .3rem .6rem; }
+.sd-career-row--fallback    { opacity: .55; }
+
+.sd-career-toggle   { background: none; border: none; cursor: default; padding: 0;
+                      font-size: inherit; color: #1F2937; text-align: left; }
+.sd-career-toggle--expandable { cursor: pointer; color: #5B2D8E; text-decoration: underline dotted; }
+.sd-career-toggle--open::before { content: '▾ '; }
+.sd-career-toggle--expandable:not(.sd-career-toggle--open)::before { content: '▸ '; }
+
+.sd-career-rationale-row    { background: #FAFAFA; }
+.sd-career-rationale-row--hidden { display: none; }
+.sd-career-rationale        { font-size: .75rem; color: #4B5563; padding: .5rem 1rem .5rem 2rem !important;
+                               font-style: italic; border-bottom: 1px solid #EDE9FE !important; }
+.sd-career-rationale-hint   { color: #9CA3AF; font-size: .7rem; }
+
+.sd-career-fit--strong      { color: #5B2D8E; font-weight: 700; }
+.sd-career-fit--moderate    { color: #1D4ED8; font-weight: 600; }
+.sd-career-fit--low         { color: #9CA3AF; }
+
+/* ── SEAA ──────────────────────────────────────────────────────── */
+.sd-seaa-row        { display: flex; gap: .75rem; flex-wrap: wrap; }
+.sd-seaa-card       { flex: 1 1 120px; padding: .7rem .9rem; border-radius: 8px;
+                      display: flex; flex-direction: column; gap: .25rem; border: 1px solid transparent; }
+.sd-seaa-domain     { font-size: .78rem; font-weight: 700; }
+.sd-seaa-score      { font-size: .9rem; font-weight: 800; }
+.sd-seaa-status     { font-size: .68rem; text-transform: uppercase; letter-spacing: .04em; opacity: .8; }
+.sd-seaa-card--green { background: #F0FDF4; color: #166534; border-color: #86EFAC; }
+.sd-seaa-card--amber { background: #FFFBEB; color: #92400E; border-color: #FCD34D; }
+.sd-seaa-card--red   { background: #FEF2F2; color: #991B1B; border-color: #FECACA; }
+.sd-seaa-card--gray  { background: #F3F4F6; color: #374151; border-color: #D1D5DB; }
