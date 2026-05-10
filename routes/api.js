@@ -10,9 +10,9 @@ let _db = null;
 function getDb() {
   if (_db) return _db;
   const Database = require('better-sqlite3');
-  const dbPath   = process.env.SQLITE_PATH
-    ? path.resolve(process.env.SQLITE_PATH)
-    : path.join(process.cwd(), 'numind.db');
+  const dbPath   = process.env.DB_PATH
+    ? path.resolve(process.env.DB_PATH)
+    : path.join(process.cwd(), 'numind_fresh.db');
 
   if (!fs.existsSync(dbPath)) {
     throw new Error(
